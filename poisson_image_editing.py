@@ -107,17 +107,17 @@ if __name__ == "__main__":
     start_time = time.time()
 
     # 导入图像
-    src1 = cv2.imread('./src1.jpg')
-    src2 = cv2.imread('./src2.jpg')
-    src3 = cv2.imread('./src3.jpg')
-    tgt = cv2.imread('./tgt.jpg')
+    src1 = cv2.imread('./examples/src1.jpg')
+    src2 = cv2.imread('./examples/src2.jpg')
+    src3 = cv2.imread('./examples/src3.jpg')
+    tgt = cv2.imread('./examples/tgt.jpg')
 
     # 掩膜转化为二通道灰度图像
-    mask1 = cv2.imread('./mask1.jpg')
+    mask1 = cv2.imread('./examples/mask1.jpg')
     mask1 = cv2.cvtColor(mask1, cv2.COLOR_BGR2GRAY)
-    mask2 = cv2.imread('./mask2.jpg')
+    mask2 = cv2.imread('./examples/mask2.jpg')
     mask2 = cv2.cvtColor(mask2, cv2.COLOR_BGR2GRAY)
-    mask3 = cv2.imread('./mask3.jpg')
+    mask3 = cv2.imread('./examples/mask3.jpg')
     mask3 = cv2.cvtColor(mask3, cv2.COLOR_BGR2GRAY)
     tgt = poisson_image_editing(120, 20, mask1, tgt, src1)
     tgt = poisson_image_editing(120, 150, mask2, tgt, src2)

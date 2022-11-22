@@ -91,9 +91,9 @@ def mixing_gradient(p_start_y, p_start_x, p_mask, p_tgt, p_src):
 
 if __name__ == "__main__":
     start_time = time.time()
-    src = cv2.imread('./2.jpg')
-    tgt = cv2.imread('./1.jpg')
-    mask = cv2.imread('./mask.jpg')
+    src = cv2.imread('./examples/2.jpg')
+    tgt = cv2.imread('./examples/1.jpg')
+    mask = cv2.imread('./examples/mask.jpg')
     mask = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
     tgt = mixing_gradient(10, 20, mask, tgt, src)
 
